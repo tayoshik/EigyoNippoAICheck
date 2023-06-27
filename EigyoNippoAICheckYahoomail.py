@@ -15,7 +15,7 @@ def query_chatgpt(message):
         'model': 'text-davinci-002',  # 使用するモデルを指定します
         'messages': [{'role': 'system', 'content': 'You are a helpful assistant.'},
                      {'role': 'user', 'content': message}
-                     {'role': 'user', 'content': '論理的で、読みやすい文章かどうかをチェックしてください。以下のことが記載されているかどうかをチェックしてください。\n報告日\n報告者\nマネージャーが把握したい内容\nお客様の課題\n報告者の自社の競合\nお客様の予算\nお客様の決裁者\nお客様の導入時期\n報告者の次のアクション\n報告者のその日の商談における疑問点・懸念点\n報告者の次の日からの計画'}]
+                     {'role': 'user', 'content': '上記文章が、論理的で、読みやすい文章かどうかをチェックしてください。以下のことが記載されているかどうかをチェックしてください。\n報告日\n報告者\nマネージャーが把握したい内容\nお客様の課題\n報告者の自社の競合\nお客様の予算\nお客様の決裁者\nお客様の導入時期\n報告者の次のアクション\n報告者のその日の商談における疑問点・懸念点\n報告者の次の日からの計画'}]
     }
     response = requests.post(url, headers=headers, json=data)
     response_data = response.json()
